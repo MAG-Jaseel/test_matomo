@@ -6,6 +6,7 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Test Matamo</title>
+  
   <!-- Matomo -->
   <script>
     var _paq = window._paq = window._paq || [];
@@ -15,12 +16,26 @@
     (function () {
       var u = "https://jaseelcloud.matomo.cloud/";
       _paq.push(['setTrackerUrl', u + 'matomo.php']);
-      _paq.push(['setSiteId', '1']);
+      _paq.push(['setSiteId', '2']);
       var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
       g.async = true; g.src = 'https://cdn.matomo.cloud/jaseelcloud.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g, s);
     })();
   </script>
   <!-- End Matomo Code -->
+
+
+  <script>
+    fetch("https://your-webhook-url.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        event: "page_view",
+        url: window.location.href
+      })
+    });
+  </script>
 </head>
 
 <body>
