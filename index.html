@@ -7,6 +7,7 @@
     <title>Test Matamo</title>
     <!-- Matomo -->
     <script>
+      // acceptCookies();
       var _paq = (window._paq = window._paq || []);
       _paq.push(["setExcludedReferrers", ["0"]]);
       _paq.push(["trackPageView"]);
@@ -14,7 +15,8 @@
       (function () {
         var u = "//nordhavenroyale.traccountable.com/";
         _paq.push(["setSessionCookieTimeout", 60]);
-        _paq.push(['requireConsent']);
+        // _paq.push(['rememberConsentGiven']);
+        // _paq.push(['requireConsent']);
         _paq.push(["setTrackerUrl", u + "matomo.php"]);
         _paq.push(["setSiteId", "6"]);
         var d = document,
