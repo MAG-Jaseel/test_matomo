@@ -1,28 +1,55 @@
 <!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Test Matamo</title>
-  <!-- Matomo -->
-  <script>
-    var _paq = window._paq = window._paq || [];
-    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-    _paq.push(['trackPageView']);
-    _paq.push(['enableLinkTracking']);
-    (function () {
-      var u = "https://jaseelcloud.matomo.cloud/";
-      _paq.push(['setTrackerUrl', u + 'matomo.php']);
-      _paq.push(['setSiteId', '1']);
-      var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
-      g.async = true; g.src = 'https://cdn.matomo.cloud/jaseelcloud.matomo.cloud/matomo.js'; s.parentNode.insertBefore(g, s);
-    })();
-
-  </script>
-  <!-- End Matomo Code -->
-  <!-- <script>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Matamo</title>
+    <!-- Matomo -->
+    <script>
+      var _paq = (window._paq = window._paq || []);
+      _paq.push(["setExcludedReferrers", ["0"]]);
+      _paq.push(["trackPageView"]);
+      _paq.push(["enableLinkTracking"]);
+      (function () {
+        var u = "//nordhavenroyale.traccountable.com/";
+        _paq.push(["setTrackerUrl", u + "matomo.php"]);
+        _paq.push(["setSiteId", "4"]);
+        _paq.push(["setCookieConsentGiven"]);
+        _paq.push(["setSessionCookieTimeout", 60]);
+        var d = document,
+          g = d.createElement("script"),
+          s = d.getElementsByTagName("script")[0];
+        g.async = true;
+        g.src = u + "matomo.js";
+        s.parentNode.insertBefore(g, s);
+      })();
+      (function () {
+        var s = document.createElement("script");
+        s.src = "https://provision.traccountable.com/cdn/st.min.js";
+        s.onload = function () {
+          stTrackClick(
+            "id",
+            "contact-form-button",
+            "Form",
+            "Click",
+            "Contact Form Button",
+            undefined,
+          );
+          stTrackView(
+            "id",
+            "contact-form",
+            "Form",
+            "View",
+            "Contact Form",
+            0.5,
+          );
+        };
+        document.head.appendChild(s);
+      })();
+    </script>
+    <!-- End Matomo Code -->
+    <!-- <script>
     fetch("https://your-webhook-url.com", {
       method: "POST",
       headers: {
@@ -34,11 +61,10 @@
       })
     });
   </script> -->
-</head>
+  </head>
 
-<body>
-  <div id="root"></div>
-  <script type="module" src="/src/main.tsx"></script>
-</body>
-
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
 </html>
