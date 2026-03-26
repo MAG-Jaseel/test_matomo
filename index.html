@@ -30,22 +30,38 @@
         var s = document.createElement("script");
         s.src = "https://provision.traccountable.com/cdn/st.min.js";
         s.onload = function () {
+          // stTrackView(
+          //   "id",
+          //   "contact-form",
+          //   "Form",
+          //   "View",
+          //   "Contact Form",
+          //   0.5,
+          // );
           stTrackClick(
             "id",
-            "contact-form-button",
-            "Form",
+            "button-1",
+            "Form ",
             "Click",
-            "Contact Form Button",
+            "Button WIith ID",
             undefined,
           );
-          stTrackView(
-            "id",
-            "contact-form",
-            "Form",
-            "View",
-            "Contact Form",
-            0.5,
+          stTrackClick(
+            "className",
+            "button-1",
+            "Form ",
+            "Click",
+            "Button WIith Class Name",
+            undefined,
           );
+          // stTrackClick(
+          //   "id",
+          //   "contact-form-button",
+          //   "BUTTON",
+          //   "Click",
+          //   "Contact Form Button",
+          //   undefined,
+          // );
         };
         document.head.appendChild(s);
       })();
