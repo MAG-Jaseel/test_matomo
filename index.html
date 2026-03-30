@@ -18,7 +18,7 @@
         // _paq.push(['rememberConsentGiven']);
         // _paq.push(['requireConsent']);
         _paq.push(["setTrackerUrl", u + "matomo.php"]);
-        _paq.push(["setSiteId", "6"]);
+        _paq.push(["setSiteId", "60"]);
         var d = document,
           g = d.createElement("script"),
           s = d.getElementsByTagName("script")[0];
@@ -30,18 +30,10 @@
         var s = document.createElement("script");
         s.src = "https://provision.traccountable.com/cdn/st.min.js";
         s.onload = function () {
-          // stTrackView(
-          //   "id",
-          //   "contact-form",
-          //   "Form",
-          //   "View",
-          //   "Contact Form",
-          //   0.5,
-          // );
           stTrackClick(
             "id",
             "button-1",
-            "Form ",
+            "Div CLick",
             "Click",
             "Button WIith ID",
             undefined,
@@ -49,11 +41,12 @@
           stTrackClick(
             "className",
             "button-1",
-            "Form ",
+            "Div CLick",
             "Click",
             "Button WIith Class Name",
             undefined,
           );
+          stTrackView("id", "logo-1", "Image View", "View", "Logo 1", 0.5);
           // stTrackClick(
           //   "id",
           //   "contact-form-button",
@@ -79,9 +72,49 @@
       })
     });
   </script> -->
+    <script>
+      // function stTrackClick(
+      //   selectorType,
+      //   selector,
+      //   category,
+      //   action,
+      //   label,
+      //   value,
+      // ) {
+
+      // stReady(function () {
+      // stQueryAll(selectorType, selector).forEach(function (el) {
+
+      // const el = document.getElementById("button-1");
+      // console.log(el);
+
+      // el.addEventListener("click", function () {
+      //   console.log("lklk");
+
+      //   _paq.push(["trackEvent", category, action, label, value]);
+      // });
+      // });
+      // });
+      // }
+
+      // stTrackClick(
+      //   "id",
+      //   "button-1",
+      //   "Div CLick",
+      //   "Click",
+      //   "Button WIith ID",
+      //   undefined,
+      // );
+
+      addEventListener("click", function (event) {
+        console.log(event.target.id);
+        console.log(event.target.className);
+      });
+    </script>
   </head>
 
   <body>
+    <!-- <div id="button-1">Button 1</div> -->
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
